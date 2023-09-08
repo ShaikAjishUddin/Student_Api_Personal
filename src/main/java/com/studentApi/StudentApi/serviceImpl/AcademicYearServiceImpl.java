@@ -11,7 +11,7 @@ import com.studentApi.StudentApi.service.AcademicYearService;
 
 
 @Service
-public class AcademicYearServiceImpl implements AcademicYearService{
+public class AcademicYearServiceImpl implements AcademicYearService {
 	
 	@Autowired
 	private AcademicYearRepository academicYearRepository;
