@@ -174,7 +174,6 @@ public class ClassWiseStudentsServiceImpl implements ClassWiseStudentsService {
 			}
 
 		}
-
 		return listOfClassWisePojos;
 	}
 
