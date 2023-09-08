@@ -148,13 +148,13 @@ public class ClassWiseStudentsServiceImpl implements ClassWiseStudentsService {
 				    classWiseStudentsPojo.setAcademicYear(acYear.getName());
 					classWiseStudentsPojo.setNoOfClasses(classWiseYear.size());
 					List<Map> classEntities = new ArrayList<>();
-					Map<String, Object> klass = new HashMap<String, Object>();
+					Map<String, Object> klass = new HashMap<>();
 					klass.put("Class Name", classEntity.getName());
 					classEntities.add(klass);
-					List<Map<String, Object>> listOfStudents = new ArrayList<Map<String, Object>>();
+					List<Map<String, Object>> listOfStudents = new ArrayList<>();
 					for (FactStudententDetails factStudententDetails : factData) {
 						if (classEntity.getId() == factStudententDetails.getClassId()) {
-							Map<String, Object> stDetail = new HashMap<String, Object>();
+							Map<String, Object> stDetail = new HashMap<>();
 							stDetail.put("Roll No", factStudententDetails.getRollNo());
 							stDetail.put("Student Id", factStudententDetails.getStudentId());
 							Student st = StdRepository.findById(factStudententDetails.getStudentId()).orElse(null);
