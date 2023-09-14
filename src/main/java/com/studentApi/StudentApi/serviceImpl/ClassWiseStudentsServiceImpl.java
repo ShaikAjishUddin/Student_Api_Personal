@@ -158,8 +158,10 @@ public class ClassWiseStudentsServiceImpl implements ClassWiseStudentsService {
 							stDetail.put("Roll No", factStudententDetails.getRollNo());
 							stDetail.put("Student Id", factStudententDetails.getStudentId());
 							Student st = StdRepository.findById(factStudententDetails.getStudentId()).orElse(null);
-							stDetail.put("Student Name", st.getName());
-							listOfStudents.add(stDetail);
+							if(st!=null) {
+								stDetail.put("Student Name", st.getName());
+								listOfStudents.add(stDetail);
+							}
 							klass.put("Students", listOfStudents);
 							classWiseStudentsPojo.setClasses(classEntities);
 						}
